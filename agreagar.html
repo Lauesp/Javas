@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Agregar</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body id="cuerpo">
+
+<nav id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-2 col  text-center">
+				<a class="text" href="index.html">
+					<font color="black">
+                		Incio
+                	</font>	
+				</a>
+			</div>	
+		</div>
+	</div>
+</nav>
+
+
+	<section id="cuerpo1">
+		<center>
+			<h2>Preguntale a la caracola mágica</h2>
+			<ul id="lista">		
+				<li style="list-style: none"><img src="imagenes/caracola.png" width="50%"></li>
+						
+			</ul>
+			<button type="button" onclick="agregar();" >Aprobare el cuatri?</button>
+		</center>		
+		
+	</section>
+<!--S C R I P T -->
+	<script type="text/javascript">
+		var n="no";
+		function agregar(){
+
+			var elemento=document.createElement("li");
+			var texto =document.createTextNode(n);
+			elemento.appendChild(texto);
+			var lista=document.getElementById("lista");
+			lista.appendChild(elemento);
+			n=n;
+			return n;
+			
+		}
+	
+	</script>
+
+</body>
+</html>

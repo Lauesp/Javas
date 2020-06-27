@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Tarjetas</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body id="cuerpo" >
+
+<nav id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-2 col  text-center">
+				<a class="text" href="index.html">
+					<font color="black">
+                		Incio
+                	</font>	
+				</a>
+			</div>	
+		</div>
+	</div>
+</nav>
+
+<article id="cuerpo2">	
+	<center><h1>Targetas</h1></center>
+<!-- T E M A T I C A -->
+<div id="tema">
+<form name=tematica > 
+		
+	<div class="container">
+				<center><h5>Elija una tamática</h5></center>
+				<div class="row">
+					<div class="col-3 col  text-center">
+					</div>
+					<div class="col-2 col  text-center">	
+	<input type="Radio" name="opci" id="uno" value="uno">San Valentin 
+					</div>
+					<div class="col-2 col  text-center">
+	<input type="Radio" name="opci" id="dos" value="dos">Cumpleaños
+					</div> 
+					<div class="col-2 col  text-center">
+	<input type="Radio" name="opci" id="tres" value="tres">Motivación 
+					</div>
+					<div class="col-3 col  text-center">
+					</div>
+</form>
+</div>
+
+<!-- I M A G E N -->
+
+<div id="imag">
+<form name=imagen>
+	<div class="container">
+				<center><h5>Elija una imágen</h5></center>
+				<div class="row">
+					<div class="col-1.5 col  text-center">
+					</div>
+
+		<div class="col-3 col  text-center">
+		<img src="imagenes/cora.png" width="50%" >
+			<label>
+			<input type="Radio" name="imagenes" value="image1"   id="image1"> Corazón
+			</label>
+		</div>
+
+		<div class="col-3 col  text-center">
+		<img src="imagenes/Cumpleaños.png" width="50%">
+			<label>
+			<input type="Radio" name="imagenes" value="image2"  id="image2"> Cumpleaños 
+			</label>
+		</div>
+
+		<div class="col-3 col  text-center">
+		<img src="imagenes/luffyy.png" width="50%">
+			<label>
+			<input type="Radio" name="imagenes" value="image3"  id="image3"> Sonrie 
+			</label>
+		</div>
+					<div class="col-1.5 col  text-center">
+					</div>
+	</div>
+</form>
+</div>
+
+<div>
+<form name=texto > 
+<center><h5>Contenido</h5></center>
+<!-- T I T U L O S -->
+	<div class="container">
+		<div class="row">
+			<div class="col-2.5 col  text-center">
+			</div>
+			<div class="col-3 col  text-center">
+			<input  type="text" name="Titulo"  placeholder="Título" id="t1">
+			</div>
+			<div class="col-1 col  text-center">
+			</div>
+			<div class="col-3 col  text-center">
+			<input type="text" name="Subtitulo"  placeholder="Subtítulo" id="s1">
+			</div>
+			<div class="col-2.5 col  text-center">
+			</div>
+		</div>
+	</div>
+<!-- M E N S A J E -->
+	<div class="container">
+		<div class="row">
+					<div class="col-1 col  text-center">
+					</div>
+
+			<div class="col-10 col  text-center">
+			<textarea placeholder="Mensaje" name="Area" id="men" rows="10" cols="80"></textarea>
+			</div>
+					<div class="col-1 col  text-center">
+					</div>
+		</div>
+<!-- D E D I C A T O R I A -->
+		<div class="row">
+			<div class="col-2.5 col  text-center">
+			</div>
+			<div class="col-4 col  text-center">
+			<input type="text" name="Nombre" placeholder="Dedicatoria" id="ded">
+			</div>
+			<div class="col-4 col  text-center">
+			<input type="text" name="Nombre" placeholder="Autor" id="dequien">
+			</div>
+			<div class="col-1.5 col  text-center">
+			</div>
+		</div>
+	</div>
+
+</form>
+</div>
+
+<br>
+
+<form> 
+<!-- C O L O R -->
+<div class="container">
+		<div class="row">
+					<div class="col-1 col  text-center">
+					</div>
+					<div class="col-5 col  text-center">
+<center><h5>Color</h5></center>
+<center><input type="color" name="color" id="cambio"></center>
+					</div>
+					<div class="col-5 col  text-center">
+<center><h5>Color de Fuente</h5></center>
+<center><input type="color" name="colorle" id="cambiol"></center>
+					</div>
+					<div class="col-1 col  text-center">
+					</div>
+<br>
+<!-- G E N E R A D O R -->
+<div class="container">
+	<div class="row">
+		<div class="col-5 col  text-center">
+		</div>
+		<div class="col-2 col  text-center">
+			<button type="button" onclick="Generador();"style="height:40px;width:100px;">Generar
+			</button>
+		</div>
+		<div class="col-5 col  text-center">
+		</div>
+	</div>
+</div>
+</form>
+
+<p id="fondo1"></p>
+
+<script type="text/javascript">
+	function Generador(){
+		//titulo,subtitulo,area de texto,persona,fondo,autor,date
+		var T,S,A,P,F,Au,D,L;
+		
+		T=document.getElementById("t1").value;
+		S=document.getElementById("s1").value;
+		A=document.getElementById("men").value;
+		P=document.getElementById("ded").value;
+		F=document.getElementById("cambio").value;
+		Au=document.getElementById("dequien").value;
+		L=document.getElementById("cambiol").value;
+		D=new Date();
+
+/*san valentin-----------------------------------------------------------------*/
+/*san valentin-----------------------------------------------------------------*/
+/*san valentin-----------------------------------------------------------------*/
+		if(document.getElementById("uno").checked == true){
+			
+			if(document.getElementById("image1").checked == true){
+				
+
+		document.write(
+			'<section >'+
+			'<audio src="canciones/The_Carpenters_close_to_you.mp3"  autoplay="" loop >'+'</audio>'+
+			'<center>'+
+			'<font face="Elephant"; size=10; color='+L+'>'
+			+T+//titulo
+			'<br>'
+			+S+//subtitulo
+			'</font>'+
+			'<article style="float:center">'+
+			'<font face="Elephant"; size=7; color='+L+'>'+
+			"Para:"+P+"."+//destinatario
+			'<br>'+'<br>'
+			+A+//mensaje
+			'<br>'+'<br>'+
+			'<center>'+'<img src="imagenes/cora.png">'+'</center>'+
+			"Con cariño:"+Au+"."+
+			'</font>'+
+			'<br>'+'<br>'+
+			'<p style="float:left">'+D+'</p>'+
+			'</article>'+
+			'</center'+
+			'</section');
+		document.body.style.backgroundColor = F;
+}
+	else if(document.getElementById("image2").checked == true){
+
+		document.write(
+			'<section >'+
+			'<audio src="canciones/The_Carpenters_close_to_you.mp3"  autoplay="" loop >'+'</audio>'+
+			'<center>'+
+			'<font face="Elephant"; size=10; color='+L+'>'
+			+T+//titulo
+			'<br>'
+			+S+//subtitulo
+			'</font>'+
+			'<article style="float:center">'+
+			'<font face="Elephant"; size=7; color='+L+'>'+
+			"Para:"+P+"."+//destinatario
+			'<br>'+'<br>'
+			+A+//mensaje
+			'<br>'+'<br>'+
+			'<center>'+'<img src="imagenes/Cumpleaños.png">'+'</center>'+
+			"Con cariño:"+Au+"."+
+			'</font>'+
+			'<br>'+'<br>'+
+			'<p style="float:left">'+D+'</p>'+
+			'</article>'+
+			'</center'+
+			'</section');
+		document.body.style.backgroundColor = F;
+}
+else if(document.getElementById("image3").checked == true){
+
+		document.write(
+			'<section >'+
+			'<audio src="canciones/The_Carpenters_close_to_you.mp3"  autoplay="" loop >'+'</audio>'+
+			'<center>'+
+			'<font face="Elephant"; size=10; color='+L+'>'
+			+T+//titulo
+			'<br>'
+			+S+//subtitulo
+			'</font>'+
+			'<article style="float:center">'+
+			'<font face="Elephant"; size=7; color='+L+'>'+
+			"Para:"+P+"."+//destinatario
+			'<br>'+'<br>'
+			+A+//mensaje
+			'<br>'+'<br>'+
+			'<center>'+'<img src="imagenes/luffyy.png">'+'</center>'+
+			"Con cariño:"+Au+"."+
+			'</font>'+
+			'<br>'+'<br>'+
+			'<p style="float:left">'+D+'</p>'+
+			'</article>'+
+			'</center'+
+			'</section');
+		document.body.style.backgroundColor = F;
+}
+
+	}
+/*Cumpleaños------------------------------------------------------------------*/
+/*Cumpleaños------------------------------------------------------------------*/
+/*Cumpleaños------------------------------------------------------------------*/
+	else if(document.getElementById("dos").checked == true){
+			if(document.getElementById("image1").checked == true){
+
+		document.write('<section >'+
+			'<audio src="canciones/the_beatles_birthday.mp3"  autoplay="" loop >'+'</audio>'+
+			'<center>'+
+			'<font face="Forte"; size=10; color='+L+'>'
+			+T+//titulo
+			'<br>'
+			+S+//subtitulo
+			'</font>'+
+			'<article style="float:center">'+
+			'<font face="Forte"; size=7; color='+L+'>'+
+			"Para:"+P+"."+//destinatario
+			'<br>'+'<br>'
+			+A+//mensaje
+			'<br>'+'<br>'+
+			'<center>'+'<img src="imagenes/cora.png">'+'</center>'+
+			"Con cariño:"+Au+"."+
+			'</font>'+
+			'<br>'+'<br>'+
+			'<p style="float:left">'+D+'</p>'+
+			'</article>'+
+			'</center'+
+			'</section');
+		document.body.style.backgroundColor = F;
+}
+	else if(document.getElementById("image2").checked == true){
+
+		document.write('<section >'+
+			'<audio src="canciones/the_beatles_birthday.mp3"  autoplay="" loop >'+'</audio>'+
+			'<center>'+
+			'<font face="Forte"; size=10; color='+L+'>'
+			+T+//titulo
+			'<br>'
+			+S+//subtitulo
+			'</font>'+
+			'<article style="float:center">'+
+			'<font face="Forte"; size=7; color='+L+'>'+
+			"Para:"+P+"."+//destinatario
+			'<br>'+'<br>'
+			+A+//mensaje
+			'<br>'+'<br>'+
+			'<center>'+'<img src="imagenes/Cumpleaños.png">'+'</center>'+
+			"Con cariño:"+Au+"."+
+			'</font>'+
+			'<br>'+'<br>'+
+			'<p style="float:left">'+D+'</p>'+
+			'</article>'+
+			'</center'+
+			'</section');
+		document.body.style.backgroundColor = F;
+}
+else if(document.getElementById("image3").checked == true){
+
+		document.write('<section >'+
+			'<audio src="canciones/the_beatles_birthday.mp3"  autoplay="" loop >'+'</audio>'+
+			'<center>'+
+			'<font face="Forte"; size=10; color='+L+'>'
+			+T+//titulo
+			'<br>'
+			+S+//subtitulo
+			'</font>'+
+			'<article style="float:center">'+
+			'<font face="Forte"; size=7; color='+L+'>'+
+			"Para:"+P+"."+//destinatario
+			'<br>'+'<br>'
+			+A+//mensaje
+			'<br>'+'<br>'+
+			'<center>'+'<img src="imagenes/luffyy.png">'+'</center>'+
+			"Con cariño:"+Au+"."+
+			'</font>'+
+			'<br>'+'<br>'+
+			'<p style="float:left">'+D+'</p>'+
+			'</article>'+
+			'</center'+
+			'</section');
+		document.body.style.backgroundColor = F;
+}
+
+	}
+/*Motivacion-------------------------------------------------------------------*/
+/*Motivacion-------------------------------------------------------------------*/
+/*Motivacion-------------------------------------------------------------------*/
+	else if(document.getElementById("tres").checked == true){
+			if(document.getElementById("image1").checked == true){
+
+		document.write('<section >'+
+			'<audio src="canciones/dont_worry_be_happy.mp3"  autoplay="" loop >'+'</audio>'+
+			'<center>'+
+			'<font face="Bradley Hand ITC"; size=10; color='+L+'>'
+			+T+//titulo
+			'<br>'
+			+S+//subtitulo
+			'</font>'+
+			'<article style="float:center">'+
+			'<font face="Bradley Hand ITC"; size=7; color='+L+'>'+
+			"Para:"+P+"."+//destinatario
+			'<br>'+'<br>'
+			+A+//mensaje
+			'<br>'+'<br>'+
+			'<center>'+'<img src="imagenes/cora.png">'+'</center>'+
+			"Con cariño:"+Au+"."+
+			'</font>'+
+			'<br>'+'<br>'+
+			'<p style="float:left">'+D+'</p>'+
+			'</article>'+
+			'</center'+
+			'</section');
+		document.body.style.backgroundColor = F;
+}
+	else if(document.getElementById("image2").checked == true){
+
+		document.write('<section >'+
+			'<audio src="canciones/dont_worry_be_happy.mp3"  autoplay="" loop >'+'</audio>'+
+			'<center>'+
+			'<font face="Bradley Hand ITC"; size=10; color='+L+'>'
+			+T+//titulo
+			'<br>'
+			+S+//subtitulo
+			'</font>'+
+			'<article style="float:center">'+
+			'<font face="Bradley Hand ITC"; size=7; color='+L+'>'+
+			"Para:"+P+"."+//destinatario
+			'<br>'+'<br>'
+			+A+//mensaje
+			'<br>'+'<br>'+
+			'<center>'+'<img src="imagenes/Cumpleaños.png">'+'</center>'+
+			"Con cariño:"+Au+"."+
+			'</font>'+
+			'<br>'+'<br>'+
+			'<p style="float:left">'+D+'</p>'+
+			'</article>'+
+			'</center'+
+			'</section');
+		document.body.style.backgroundColor = F;
+}
+else if(document.getElementById("image3").checked == true){
+
+		document.write('<section >'+
+			'<audio src="canciones/dont_worry_be_happy.mp3"  autoplay="" loop >'+'</audio>'+
+			'<center>'+
+			'<font face="Bradley Hand ITC"; size=10; color='+L+'>'
+			+T+//titulo
+			'<br>'
+			+S+//subtitulo
+			'</font>'+
+			'<article style="float:center">'+
+			'<font face="Bradley Hand ITC"; size=7; color='+L+'>'+
+			"Para:"+P+"."+//destinatario
+			'<br>'+'<br>'
+			+A+//mensaje
+			'<br>'+'<br>'+
+			'<center>'+'<img src="imagenes/luffyy.png">'+'</center>'+
+			"Con cariño:"+Au+"."+
+			'</font>'+
+			'<br>'+'<br>'+
+			'<p style="float:left">'+D+'</p>'+
+			'</article>'+
+			'</center'+
+			'</section');
+		document.body.style.backgroundColor = F;
+}
+
+	}
+
+
+			
+	}
+</script>
+
+</style>
+</article>
+</body>
+</html>

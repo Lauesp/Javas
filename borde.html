@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Bordes</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body id="cuerpo">
+
+	<nav id="menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-2 col  text-center">
+						<a class="text" href="index.html">
+							<font color="black">
+                				Incio
+                			</font>	
+						</a>
+					</div>	
+				</div>
+			</div>
+		</nav>
+
+	<article id="cuerpo1">
+	<div>
+		<font color="black">
+            Modificación de bordes
+        </font>
+	</div>
+	<div>
+		<figure >
+			<img id="imgborde" src="imagenes/fe.png" style="border:10px solid #000000">
+
+		</figure>
+	</div>
+	<form name="form1">
+<!-- T A M A Ñ O -->
+	<div>
+		<p>Seleccione el ancho del borde</p>
+		<input id="bt" type="button" value="10px" onclick="setBorderWidth(10);">
+		<input id="bt" type="button" value="20px" onclick="setBorderWidth(20);">
+		<input id="bt" type="button" value="30px" onclick="setBorderWidth(30);">
+		<input id="bt" type="button" value="40px" onclick="setBorderWidth(40);">
+		<input id="bt" type="button" value="50px" onclick="setBorderWidth(50);">
+		
+<!-- T I P O -->
+		<p>Seleccione el tipo de borde</p>
+		<select  name="tipo" id="t">
+			<option value="solid">Normal</option>
+			<option value="double">Doble</option>
+			<option value="dotted">Punteado</option>
+			<option value="dashed">Guiones</option>
+		</select><!-- C O L O R -->
+		<p>Seleccione el color de borde</p>
+		<input   type="color" name="color" id="cambio" >
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		
+		function setBorderWidth(ancho){
+			  
+			document.getElementById("imgborde").style.borderWidth=ancho+"px";
+			var c=document.getElementById("cambio").value;
+			document.getElementById("imgborde").style.borderColor=c;
+			var m=document.getElementById("t").value;
+			document.getElementById("imgborde").style.borderStyle=m;
+			     
+
+			
+
+		}
+		
+	</script>
+	</article>
+
+</body>
+</html>

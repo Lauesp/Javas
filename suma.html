@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Suma de numeros</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body id="cuerpo">
+
+<nav id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-2 col  text-center">
+				<a class="text" href="index.html">
+					<font color="black">
+                		Incio
+                	</font>	
+				</a>
+			</div>	
+		</div>
+	</div>
+</nav>
+
+<section id="cuerpo1">
+<label id="respuesta"></label>
+<script type="text/javascript">
+	var suma=parseInt("0");
+	var numero=parseInt () ; 
+	 do
+	 {
+	 	numero=parseInt(prompt("Ingresa numero"));
+	 	suma=suma+numero;
+	}
+	 while (numero>=1);
+
+	document.getElementById("respuesta").innerHTML="La suma es: " + suma;
+</script>
+</section>
+</body>
+</html>
